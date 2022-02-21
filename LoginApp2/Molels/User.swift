@@ -1,0 +1,34 @@
+//
+//  Question.swift
+//  LoginApp2
+//
+//  Created by Александр Уколов on 18.02.2022.
+//
+
+struct User {
+    let login: String
+    let password: String
+    let person: Person
+    
+    static func getUserData() -> User {
+        User(
+            login: "User",
+            password: "Password",
+            person: Person.getPerson()
+        )
+    }
+}
+
+struct Person {
+    let name: String
+    let surname: String
+    let image: String
+    
+    var fullName: String {
+        "\(name) \(surname)"
+    }
+    
+    static func getPerson() -> Person {
+        Person(name: "Aleksandr", surname: "Ukolov", image: "SwiftImage")
+    }
+}
