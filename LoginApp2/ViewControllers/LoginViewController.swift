@@ -13,13 +13,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
 
-   // @IBOutlet var loginButton: UIButton!
    @IBOutlet weak var loginButton: UIButton!
 
-    // MARK: - Private properties
     private let user = User.getUserData()
     
-    // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarController.viewControllers else { return }

@@ -165,7 +165,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Mor info"/>
                                 <connections>
-                                    <segue destination="XvE-2z-lsN" kind="showDetail" identifier="userinfo2VC" id="LlV-W3-rCL"/>
+                                    <segue destination="XvE-2z-lsN" kind="show" identifier="userinfo2VC" id="LlV-W3-rCL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -202,7 +202,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Contact"/>
                                 <connections>
-                                    <segue destination="Qc5-A9-aqh" kind="showDetail" identifier=" imageVC" id="dVq-kc-lQE"/>
+                                    <segue destination="Qc5-A9-aqh" kind="show" identifier=" imageVC" id="dVq-kc-lQE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -230,7 +230,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clw-QX-hZQ">
-                                <rect key="frame" x="136" y="537" width="48" height="31"/>
+                                <rect key="frame" x="136" y="488" width="48" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Exit"/>
                                 <connections>
