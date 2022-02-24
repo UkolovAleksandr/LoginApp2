@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B0E7EC627C3F0FA00F9AE2B /* PortfolioWiewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0E7EC527C3F0FA00F9AE2B /* PortfolioWiewController.swift */; };
+		5B0E7EC627C3F0FA00F9AE2B /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0E7EC527C3F0FA00F9AE2B /* PortfolioViewController.swift */; };
 		5B9E433527BFE3840002308B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E433427BFE3840002308B /* AppDelegate.swift */; };
 		5B9E433727BFE3840002308B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E433627BFE3840002308B /* SceneDelegate.swift */; };
 		5B9E433927BFE3840002308B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E433827BFE3840002308B /* LoginViewController.swift */; };
@@ -18,11 +18,10 @@
 		5B9E435027C11ED40002308B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E434F27C11ED40002308B /* WelcomeViewController.swift */; };
 		5B9E435227C11EEF0002308B /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E435127C11EEF0002308B /* UserInfoViewController.swift */; };
 		5B9E435427C11F070002308B /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E435327C11F070002308B /* ImageViewController.swift */; };
-		5B9E435927C14CB20002308B /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E435827C14CB20002308B /* BackgroundViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5B0E7EC527C3F0FA00F9AE2B /* PortfolioWiewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioWiewController.swift; sourceTree = "<group>"; };
+		5B0E7EC527C3F0FA00F9AE2B /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		5B9E433127BFE3840002308B /* LoginApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9E433427BFE3840002308B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B9E433627BFE3840002308B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +34,6 @@
 		5B9E434F27C11ED40002308B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		5B9E435127C11EEF0002308B /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		5B9E435327C11F070002308B /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
-		5B9E435827C14CB20002308B /* BackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +66,7 @@
 		5B9E433327BFE3840002308B /* LoginApp2 */ = {
 			isa = PBXGroup;
 			children = (
-				5B9E434B27C001B30002308B /* ViewcControllers */,
-				5B9E435A27C14CBA0002308B /* Background */,
+				5B9E434B27C001B30002308B /* ViewControllers */,
 				5B9E434C27C002400002308B /* Molels */,
 				5B9E434827BFFF7F0002308B /* Storyboardes */,
 				5B9E434927C000210002308B /* Resources */,
@@ -105,16 +102,16 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		5B9E434B27C001B30002308B /* ViewcControllers */ = {
+		5B9E434B27C001B30002308B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				5B9E433827BFE3840002308B /* LoginViewController.swift */,
 				5B9E434F27C11ED40002308B /* WelcomeViewController.swift */,
 				5B9E435127C11EEF0002308B /* UserInfoViewController.swift */,
 				5B9E435327C11F070002308B /* ImageViewController.swift */,
-				5B0E7EC527C3F0FA00F9AE2B /* PortfolioWiewController.swift */,
+				5B0E7EC527C3F0FA00F9AE2B /* PortfolioViewController.swift */,
 			);
-			path = ViewcControllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		5B9E434C27C002400002308B /* Molels */ = {
@@ -123,15 +120,6 @@
 				5B9E434D27C004A60002308B /* User.swift */,
 			);
 			path = Molels;
-			sourceTree = "<group>";
-		};
-		5B9E435A27C14CBA0002308B /* Background */ = {
-			isa = PBXGroup;
-			children = (
-				5B9E435827C14CB20002308B /* BackgroundViewController.swift */,
-			);
-			name = Background;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,13 +193,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B9E435927C14CB20002308B /* BackgroundViewController.swift in Sources */,
 				5B9E433927BFE3840002308B /* LoginViewController.swift in Sources */,
 				5B9E435227C11EEF0002308B /* UserInfoViewController.swift in Sources */,
 				5B9E435027C11ED40002308B /* WelcomeViewController.swift in Sources */,
 				5B9E435427C11F070002308B /* ImageViewController.swift in Sources */,
 				5B9E434E27C004A60002308B /* User.swift in Sources */,
-				5B0E7EC627C3F0FA00F9AE2B /* PortfolioWiewController.swift in Sources */,
+				5B0E7EC627C3F0FA00F9AE2B /* PortfolioViewController.swift in Sources */,
 				5B9E433527BFE3840002308B /* AppDelegate.swift in Sources */,
 				5B9E433727BFE3840002308B /* SceneDelegate.swift in Sources */,
 			);
@@ -360,6 +347,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G4TVTH2H92;
@@ -388,6 +376,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G4TVTH2H92;

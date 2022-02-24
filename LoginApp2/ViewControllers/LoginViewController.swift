@@ -48,7 +48,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "1")
+        backgroundImage.image = UIImage(named: "4")
         self.view.insertSubview(backgroundImage, at: 0)
 
         loginButton.layer.cornerRadius = 10

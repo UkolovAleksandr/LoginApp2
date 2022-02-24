@@ -13,6 +13,11 @@ class UserInfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "5")
+        self.view.insertSubview(backgroundImage, at: 0)
+        
     //    title = user.person.fullName
     }
     
