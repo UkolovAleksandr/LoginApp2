@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
         viewControllers.forEach {
             if let welcomeVC = $0 as? WelcomeViewController {
                 welcomeVC.user = user
+                
             } else if let navigationVC = $0 as? UINavigationController {
                 let userInfoVC = navigationVC.topViewController as! UserInfoViewController
                 userInfoVC.user = user
@@ -100,3 +101,4 @@ class LoginViewController: UIViewController {
         return true
     }
 }
+

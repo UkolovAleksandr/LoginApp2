@@ -152,10 +152,10 @@
             </objects>
             <point key="canvasLocation" x="-778.125" y="952.81690140845069"/>
         </scene>
-        <!--User Info one View Controller-->
+        <!--User Info View Controller-->
         <scene sceneID="A3n-8Y-d7g">
             <objects>
-                <viewController id="NO6-JQ-8Sw" userLabel="User Info one View Controller" customClass="UserInfoViewController" customModule="LoginApp2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NO6-JQ-8Sw" customClass="UserInfoViewController" customModule="LoginApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="glJ-bc-ggO" userLabel="User">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,12 +180,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mnl-uc-J61" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="765" y="953"/>
+            <point key="canvasLocation" x="765" y="952.81690140845069"/>
         </scene>
-        <!--User info two View Controller-->
+        <!--Image View Controller-->
         <scene sceneID="OA8-B6-lGC">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="XvE-2z-lsN" userLabel="User info two View Controller" customClass="UserInfoViewController" customModule="LoginApp2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="XvE-2z-lsN" userLabel="Image View Controller" customClass="UserInfoViewController" customModule="LoginApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rGW-cK-Kqm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -197,60 +197,22 @@
                                     <constraint firstAttribute="height" constant="200" id="mla-7l-lJH"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIm-Ue-aiu">
-                                <rect key="frame" x="122" y="421.5" width="76" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Contact"/>
-                                <connections>
-                                    <segue destination="Qc5-A9-aqh" kind="show" identifier=" imageVC" id="dVq-kc-lQE"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8uz-yQ-L8E"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="UXc-lH-h3D" firstAttribute="centerY" secondItem="rGW-cK-Kqm" secondAttribute="centerY" constant="-2.5" id="Bia-ja-5er"/>
                             <constraint firstItem="UXc-lH-h3D" firstAttribute="centerX" secondItem="rGW-cK-Kqm" secondAttribute="centerX" id="UwH-to-a6f"/>
-                            <constraint firstItem="CIm-Ue-aiu" firstAttribute="top" secondItem="UXc-lH-h3D" secondAttribute="bottom" constant="40" id="dKM-yP-jWV"/>
-                            <constraint firstItem="CIm-Ue-aiu" firstAttribute="centerX" secondItem="8uz-yQ-L8E" secondAttribute="centerX" id="yYp-3p-2at"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="coZ-0e-aOX"/>
+                    <navigationItem key="navigationItem" id="coZ-0e-aOX"/>
+                    <connections>
+                        <outlet property="view" destination="UXc-lH-h3D" id="Chz-EQ-tNN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dok-x6-4mm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1573" y="953"/>
-        </scene>
-        <!--Porfolio View Controller-->
-        <scene sceneID="j62-9V-OiV">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Qc5-A9-aqh" userLabel="Porfolio View Controller" customClass="ImageViewController" customModule="LoginApp2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1rO-b5-TQe">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clw-QX-hZQ">
-                                <rect key="frame" x="136" y="488" width="48" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Exit"/>
-                                <connections>
-                                    <segue destination="Cyc-fw-YFs" kind="unwind" unwindAction="unwindSegueWithSegue:" id="vo2-GD-khy"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="h6R-2d-aYv"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Clw-QX-hZQ" firstAttribute="bottom" secondItem="h6R-2d-aYv" secondAttribute="bottom" id="Bpz-xa-CLP"/>
-                            <constraint firstItem="Clw-QX-hZQ" firstAttribute="centerX" secondItem="h6R-2d-aYv" secondAttribute="centerX" id="Zh9-bv-Nn2"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Title" id="hxH-sB-OVL"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G5X-Zm-sQv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="Cyc-fw-YFs" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="2351" y="953"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="teN-Lo-Inu">
@@ -279,6 +241,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hQZ-zX-ZzC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="systemPinkColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -298,6 +263,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

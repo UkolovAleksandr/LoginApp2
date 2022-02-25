@@ -14,16 +14,17 @@ class UserInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = user.person.fullName
+        
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "5")
         self.view.insertSubview(backgroundImage, at: 0)
         
-    //    title = user.person.fullName
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let userinfo2VC = segue.destination as? ImageViewController else { return }
-        userinfo2VC.user = user
+        guard let imageVC = segue.destination as? ImageViewController else { return }
+        imageVC.user = user
     }
 }
 

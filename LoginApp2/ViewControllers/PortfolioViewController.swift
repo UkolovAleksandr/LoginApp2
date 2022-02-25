@@ -8,7 +8,7 @@
 import UIKit
 
 class PortfolioViewController: UIViewController {
-    
+    var user: User!
 override func viewDidLoad() {
     super.viewDidLoad()
     
