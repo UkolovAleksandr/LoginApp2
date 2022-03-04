@@ -9,12 +9,12 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-
-   @IBOutlet weak var loginButton: UIButton!
-
+    
+    @IBOutlet weak var loginButton: UIButton!
+    
     private let user = User.getUserData()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,41 +41,41 @@ class LoginViewController: UIViewController {
             )
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "4")
         self.view.insertSubview(backgroundImage, at: 0)
-
+        
         loginButton.layer.cornerRadius = 10
     }
-
+    
     @IBAction func forgotUserName() {
         let alert = UIAlertController(title: "Attention", message: "Your name is \(user.login)", preferredStyle: .alert)
         let okBtn = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alert.addAction(okBtn)
-
+        
         present(alert, animated: true, completion: nil)
     }
-
+    
     @IBAction func forgotUserPassword() {
         let alert = UIAlertController(title: "Attention", message: "Your password is \(user.password)", preferredStyle: .alert)
         let okBtn = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alert.addAction(okBtn)
-
+        
         present(alert, animated: true, completion: nil)
     }
-
+    
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         userNameTextField.text = ""
         passwordTextField.text = ""
     }
-
+    
 }
 
-    extension LoginViewController {
+extension LoginViewController {
     private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
@@ -85,7 +85,7 @@ class LoginViewController: UIViewController {
         present(alert, animated: true)
     }
 }
-    extension LoginViewController: UITextFieldDelegate {
+extension LoginViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)

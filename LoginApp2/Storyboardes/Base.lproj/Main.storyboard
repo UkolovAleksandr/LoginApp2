@@ -43,7 +43,8 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98m-Vo-Nzw" userLabel="Login Button">
                                         <rect key="frame" x="0.0" y="112" width="260" height="31"/>
-                                        <color key="backgroundColor" red="0.72310799360275269" green="0.93511921167373657" blue="0.79822218418121338" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.060002215210000001" green="0.17213952539999999" blue="0.75603920219999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Log In"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Log In" titleAlignment="automatic"/>
@@ -115,6 +116,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qh-uo-u33">
                                 <rect key="frame" x="134" y="402.5" width="52" height="30"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log out"/>
                                 <connections>
@@ -165,7 +167,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Mor info"/>
                                 <connections>
-                                    <segue destination="XvE-2z-lsN" kind="show" identifier="userinfo2VC" id="LlV-W3-rCL"/>
+                                    <segue destination="XvE-2z-lsN" kind="show" identifier="" id="LlV-W3-rCL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -177,6 +179,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hmh-kX-Jr9"/>
+                    <connections>
+                        <outlet property="view" destination="glJ-bc-ggO" id="ReU-jF-o5p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mnl-uc-J61" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -185,7 +190,7 @@
         <!--Image View Controller-->
         <scene sceneID="OA8-B6-lGC">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="XvE-2z-lsN" userLabel="Image View Controller" customClass="UserInfoViewController" customModule="LoginApp2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="XvE-2z-lsN" userLabel="Image View Controller" customClass="ImageViewController" customModule="LoginApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rGW-cK-Kqm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -197,17 +202,28 @@
                                     <constraint firstAttribute="height" constant="200" id="mla-7l-lJH"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WlS-MV-YYo">
+                                <rect key="frame" x="139" y="389" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.6401551365852356" green="0.92238909006118774" blue="0.63472700119018555" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8uz-yQ-L8E"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="WlS-MV-YYo" firstAttribute="centerX" secondItem="8uz-yQ-L8E" secondAttribute="centerX" id="43u-a4-iPe"/>
                             <constraint firstItem="UXc-lH-h3D" firstAttribute="centerY" secondItem="rGW-cK-Kqm" secondAttribute="centerY" constant="-2.5" id="Bia-ja-5er"/>
+                            <constraint firstItem="8uz-yQ-L8E" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WlS-MV-YYo" secondAttribute="trailing" symbolic="YES" id="MD6-hy-pXT"/>
                             <constraint firstItem="UXc-lH-h3D" firstAttribute="centerX" secondItem="rGW-cK-Kqm" secondAttribute="centerX" id="UwH-to-a6f"/>
+                            <constraint firstItem="WlS-MV-YYo" firstAttribute="top" secondItem="UXc-lH-h3D" secondAttribute="bottom" constant="7.5" id="fMx-Md-5A5"/>
+                            <constraint firstItem="WlS-MV-YYo" firstAttribute="leading" secondItem="8uz-yQ-L8E" secondAttribute="leading" constant="139" id="mgP-hg-588"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="coZ-0e-aOX"/>
                     <connections>
-                        <outlet property="view" destination="UXc-lH-h3D" id="Chz-EQ-tNN"/>
+                        <outlet property="imageView" destination="UXc-lH-h3D" id="VnX-oa-Wsu"/>
+                        <outlet property="infoLable" destination="WlS-MV-YYo" id="Dfs-oM-hVL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dok-x6-4mm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -252,7 +268,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tTx-XD-fs4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6" y="953"/>
+            <point key="canvasLocation" x="0.0" y="953"/>
         </scene>
     </scenes>
     <resources>
@@ -263,6 +279,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
